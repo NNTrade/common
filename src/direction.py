@@ -1,3 +1,4 @@
+from __future__ import annotations
 from enum import Enum
 
 
@@ -6,7 +7,7 @@ class direction(Enum):
     Short = -1
 
     @staticmethod
-    def from_str(label: str):
+    def parse(label: str) -> direction:
         l_label = label.lower()
         if l_label == 'long':
             return direction.Long

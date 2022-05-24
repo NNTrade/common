@@ -1,4 +1,4 @@
-import src.direction as dir
+from src.direction import direction
 import unittest
 import logging
 
@@ -9,11 +9,11 @@ class DirectionTestCase(unittest.TestCase):
                         datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
 
     def test_parse(self):
-      self.assertEqual(dir.direction.from_str("long"), dir.direction.Long)
-      self.assertEqual(dir.direction.from_str("Long"), dir.direction.Long)
-      self.assertEqual(dir.direction.from_str("LONG"), dir.direction.Long)
-      self.assertEqual(dir.direction.from_str("LoNg"), dir.direction.Long)
-      self.assertEqual(dir.direction.from_str("short"), dir.direction.Short)
-      self.assertEqual(dir.direction.from_str("Short"), dir.direction.Short)
-      self.assertEqual(dir.direction.from_str("SHORT"), dir.direction.Short)
-      self.assertEqual(dir.direction.from_str("shOrt"), dir.direction.Short)
+      self.assertEqual(direction.parse("long"), direction.Long)
+      self.assertEqual(direction.parse("Long"), direction.Long)
+      self.assertEqual(direction.parse("LONG"), direction.Long)
+      self.assertEqual(direction.parse("LoNg"), direction.Long)
+      self.assertEqual(direction.parse("short"), direction.Short)
+      self.assertEqual(direction.parse("Short"), direction.Short)
+      self.assertEqual(direction.parse("SHORT"), direction.Short)
+      self.assertEqual(direction.parse("shOrt"), direction.Short)
