@@ -5,4 +5,4 @@
 - NNTrade.commons
 
 ## Install
-git+ssh://git@github.com/NNTrade/commons.git
+NNTrade.commons @ git+ssh://git@github.com/NNTrade/commons.git#egg=NNTrade.commons
