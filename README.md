@@ -2,7 +2,9 @@
 Базовые классы для проекта NNTrade
 
 ## Import
-- NNTrade.commons
+```python
+import NNTrade.common
+```
 
 ## Install
-NNTrade.commons @ git+ssh://git@github.com/NNTrade/commons.git#egg=NNTrade.commons
+NNTrade.common @ git+ssh://git@github.com/NNTrade/common.git#egg=NNTrade.common
