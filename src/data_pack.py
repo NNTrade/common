@@ -1,7 +1,5 @@
 from __future__ import annotations
 from argparse import ArgumentError
-from tkinter import Y
-from turtle import st
 from typing import List
 import pandas as pd
 

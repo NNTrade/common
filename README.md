@@ -1,4 +1,4 @@
-# StopLossMetric
+# Common
 Базовые классы для проекта NNTrade
 
 ## Import

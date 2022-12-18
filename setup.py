@@ -14,7 +14,7 @@ with open(file_path) as requirements_txt:
         in pkg_resources.parse_requirements(requirements_txt)
     ]
 
-lib = "NNTrade.commons"
+lib = "NNTrade.common"
 
 libs = [f"{lib}.{pkg}" for pkg in setuptools.find_packages(where="src")]
 libs.append(lib)
@@ -22,15 +22,15 @@ libs.append(lib)
 setuptools.setup(
     name=lib,
     version=VERSION,
-    description="Commons classes",
-    author_email="",
-    url="",
-    keywords=["commons"],
+    description="Common classes",
+    author_email="insonus.k@gmail.com",
+    url="https://github.com/NNTrade/common",
+    keywords=["common"],
     install_requires=install_requires,
     packages=libs,
     package_dir={lib: 'src'},
     include_package_data=True,
     long_description="""\
-    Commons classes for NNTrade
+    Common classes for NNTrade
     """
 )

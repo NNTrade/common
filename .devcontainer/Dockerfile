@@ -10,8 +10,8 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 COPY requirements.txt /tmp/pip-tmp/
 COPY requirements_dev.txt /tmp/pip-tmp/
-RUN pip3 --no-cache-dir install -U -r /tmp/pip-tmp/requirements.txt
-RUN pip3 --no-cache-dir install -U -r /tmp/pip-tmp/requirements_dev.txt \
+RUN pip3 install -U -r /tmp/pip-tmp/requirements.txt
+RUN pip3 install -U -r /tmp/pip-tmp/requirements_dev.txt \
     && rm -rf /tmp/pip-tmp
 
 # [Optional] Uncomment this section to install additional OS packages.
@@ -21,4 +21,4 @@ RUN pip3 --no-cache-dir install -U -r /tmp/pip-tmp/requirements_dev.txt \
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
-RUN jupyter nbextension enable --py widgetsnbextension
+#RUN jupyter nbextension enable --py widgetsnbextension

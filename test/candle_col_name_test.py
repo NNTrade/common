@@ -14,6 +14,7 @@ class CandleColNameTestCase(unittest.TestCase):
       self.assertEqual('open',ccn.OPEN)
       self.assertEqual('close',ccn.CLOSE)
       self.assertEqual('volume',ccn.VOLUME)
+      self.assertEqual("start_date_time", ccn.INDEX)
 
     def test_rename_values(self):
       ccn.LOW = "low1"
@@ -21,8 +22,10 @@ class CandleColNameTestCase(unittest.TestCase):
       ccn.OPEN = "open1"
       ccn.CLOSE = "close1"
       ccn.VOLUME = "volume1"
+      ccn.INDEX = "start_date_time1"
       self.assertEqual('low1',ccn.LOW)
       self.assertEqual('high1',ccn.HIGH)
       self.assertEqual('open1',ccn.OPEN)
       self.assertEqual('close1',ccn.CLOSE)
       self.assertEqual('volume1',ccn.VOLUME)
+      self.assertEqual("start_date_time1", ccn.INDEX)
