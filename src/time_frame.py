@@ -10,9 +10,10 @@ class TimeFrame(Enum):
     MINUTE15 = 5
     MINUTE30 = 6
     HOUR = 7
-    DAY = 8
-    WEEK = 9
-    MONTH = 10
+    HOUR4 = 8
+    DAY = 9
+    WEEK = 10
+    MONTH = 11
 
     m1 = 2
     m5 = 3
@@ -20,9 +21,10 @@ class TimeFrame(Enum):
     m15 = 5
     m30 = 6
     H = 7
-    D = 8
-    W = 9
-    M = 10
+    H4 = 8
+    D = 9
+    W = 10
+    M = 11
     """
     -1 self > a
     0  self = a
@@ -42,6 +44,8 @@ class TimeFrame(Enum):
             return 60*30
         elif self == TimeFrame.HOUR:
             return 60*60
+        elif self == TimeFrame.HOUR4:
+            return 60*60*4
         elif self == TimeFrame.DAY:
             return 60*60*24
         elif self == TimeFrame.WEEK:
@@ -69,6 +73,8 @@ class TimeFrame(Enum):
             return "m30"
         elif self == TimeFrame.HOUR or self == TimeFrame.H:
             return "H"
+        elif self == TimeFrame.HOUR4 or self == TimeFrame.H4:
+            return "H4"
         elif self == TimeFrame.DAY or self == TimeFrame.D:
             return "D"
         elif self == TimeFrame.WEEK or self == TimeFrame.W:
@@ -90,6 +96,8 @@ class TimeFrame(Enum):
             return "Minute30"
         elif self == TimeFrame.HOUR or self == TimeFrame.H:
             return "Hour"
+        elif self == TimeFrame.HOUR4 or self == TimeFrame.H4:
+            return "Hour4"
         elif self == TimeFrame.DAY or self == TimeFrame.D:
             return "Day"
         elif self == TimeFrame.WEEK or self == TimeFrame.W:
@@ -121,6 +129,8 @@ class TimeFrame(Enum):
             return TimeFrame.MINUTE30
         elif label in ('HOUR', 'H'):
             return TimeFrame.HOUR
+        elif label in ('HOUR4', 'H4'):
+            return TimeFrame.HOUR4
         elif label in ('DAY', 'D'):
             return TimeFrame.DAY
         elif label in ('WEEK', 'W'):
