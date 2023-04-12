@@ -29,3 +29,13 @@ class TimeFrameTestCase(unittest.TestCase):
         # Assert
         self.assertEqual(expectedTf, TimeFrame["m1"])
         self.assertEqual(expectedTf, TimeFrame["MINUTE1"])
+
+    def test_WHEN_compare_THEN_correct(self):
+        # Array
+        tf1 = TimeFrame.HOUR4
+        tf2 = TimeFrame.DAY
+
+        # Act
+        
+        # Assert
+        self.assertTrue(tf1 < tf2)
