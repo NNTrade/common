@@ -7,4 +7,4 @@ import NNTrade.common
 ```
 
 ## Install
-NNTrade.common @ git+ssh://git@github.com/NNTrade/common.git#egg=NNTrade.common
+NNTrade.common @ git+https://git@github.com/NNTrade/common.git#egg=NNTrade.common
