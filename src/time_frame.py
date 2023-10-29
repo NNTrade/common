@@ -59,7 +59,53 @@ class TimeFrame(Enum):
         elif self.value < a.value:
             return 1
         return 0
-
+    
+    def to_full(self)->TimeFrame:
+        if self == TimeFrame.MINUTE1 or self == TimeFrame.m1:
+            return TimeFrame.MINUTE1
+        elif self == TimeFrame.MINUTE5 or self == TimeFrame.m5:
+            return TimeFrame.MINUTE5
+        elif self == TimeFrame.MINUTE10 or self == TimeFrame.m10:
+            return TimeFrame.MINUTE10
+        elif self == TimeFrame.MINUTE15 or self == TimeFrame.m15:
+            return TimeFrame.MINUTE15
+        elif self == TimeFrame.MINUTE30 or self == TimeFrame.m30:
+            return TimeFrame.MINUTE30
+        elif self == TimeFrame.HOUR or self == TimeFrame.H:
+            return TimeFrame.HOUR
+        elif self == TimeFrame.HOUR4 or self == TimeFrame.H4:
+            return TimeFrame.HOUR4
+        elif self == TimeFrame.DAY or self == TimeFrame.D:
+            return TimeFrame.DAY
+        elif self == TimeFrame.WEEK or self == TimeFrame.W:
+            return TimeFrame.WEEK
+        elif self == TimeFrame.MONTH or self == TimeFrame.M:
+            return TimeFrame.MONTH
+        raise Exception(f"Unexpected TimeFrame {self}")
+    
+    def to_short(self)->TimeFrame:
+        if self == TimeFrame.MINUTE1 or self == TimeFrame.m1:
+            return TimeFrame.m1
+        elif self == TimeFrame.MINUTE5 or self == TimeFrame.m5:
+            return TimeFrame.m5
+        elif self == TimeFrame.MINUTE10 or self == TimeFrame.m10:
+            return TimeFrame.m10
+        elif self == TimeFrame.MINUTE15 or self == TimeFrame.m15:
+            return TimeFrame.m15
+        elif self == TimeFrame.MINUTE30 or self == TimeFrame.m30:
+            return TimeFrame.m30
+        elif self == TimeFrame.HOUR or self == TimeFrame.H:
+            return TimeFrame.H
+        elif self == TimeFrame.HOUR4 or self == TimeFrame.H4:
+            return TimeFrame.H4
+        elif self == TimeFrame.DAY or self == TimeFrame.D:
+            return TimeFrame.D
+        elif self == TimeFrame.WEEK or self == TimeFrame.W:
+            return TimeFrame.W
+        elif self == TimeFrame.MONTH or self == TimeFrame.M:
+            return TimeFrame.M
+        raise Exception(f"Unexpected TimeFrame {self}")
+    
     def short_name(self) -> str:
         if self == TimeFrame.MINUTE1 or self == TimeFrame.m1:
             return "m1"

@@ -39,3 +39,12 @@ class TimeFrameTestCase(unittest.TestCase):
         
         # Assert
         self.assertTrue(tf1 < tf2)
+
+    def test_WHEN_convert_to_THEN_print_also_converting(self):
+        # Array
+    
+        # Act
+    
+        # Assert
+        self.assertEqual(f"{TimeFrame.DAY}", f"{TimeFrame.D.to_full()}")
+        self.assertEqual(f"{TimeFrame.D}", f"{TimeFrame.DAY.to_short()}")
